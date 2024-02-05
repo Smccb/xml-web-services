@@ -19,7 +19,7 @@ class GetProduct(Resource):
         
         # the file to be converted to 
         # json format
-        filename = 'product.txt'
+        filename = 'WebServices-Lab1/product.txt'
         
         # dictionary where the lines from
         # text will be stored
@@ -38,14 +38,14 @@ class GetProduct(Resource):
         
         # creating json file
         # the JSON file is named as test1
-        out_file = open("output.json", "w")
+        out_file = open("WebServices-Lab1/output.json", "w")
         json.dump(dict1, out_file, indent = 4, sort_keys = False)
         out_file.close()
 
 
         # read the file back in and 
         # send it through the API
-        f = open('output.json')
+        f = open('WebServices-Lab1/output.json')
         data = json.load(f)
 
         return data
